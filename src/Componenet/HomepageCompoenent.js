@@ -1,12 +1,20 @@
 import { storage } from '@/Firebase';
 import { ref, getDownloadURL } from 'firebase/storage'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import Aboutus from './Aboutus';
+import Header from './Header';
+import MiddleComp from './MiddleComp';
 function HomepageCompoenent() {
-
-        getDownloadURL(ref(storage, 'Image/userDisplay')).then(u => { console.log(u);})
-
+    const [Imagesrc, setImage] = useState()
+    useEffect(() => {
+        getDownloadURL(ref(storage, 'Image/userDisplay')).then(u => { console.log(u); setImage(u) })
+    }, [])
     return (
-        <div>HomepageCompoenent</div>
+        <div className='w-screen flex flex-col justify-center'>
+            <Header />
+            <MiddleComp Imagesrc={Imagesrc} />
+            <Aboutus />
+        </div>
     )
 }
 

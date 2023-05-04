@@ -6,7 +6,7 @@ import { handleFileChange } from '@/Utils/webpfunction';
 function index() {
     const [image, setImage] = useState(null)
     function onChangeHandler(e) {
-        console.log(e);
+        console.log(e);        
         handleFileChange(e, image, setImage)
     }
     function uploadButton() {

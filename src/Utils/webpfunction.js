@@ -11,7 +11,7 @@ export const handleFileChange = (event, file ,setFile) => {
                 const ctx = canvas.getContext('2d');
                 ctx.drawImage(img, 0, 0);
                 const dataUrl = canvas.toDataURL('image/webp', 1);
-                const newFile = dataURLtoFile(dataUrl, file.name + ".webp");
+                const newFile = dataURLtoFile(dataUrl, 'MainImage' + ".webp");
                 setFile(newFile);
             };
             img.src = reader.result;
