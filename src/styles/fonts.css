@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'FunkySignature';
+    src: url('/fonts/funky_signature/Funky Signature.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ibm';
+    src: url('/fonts/ibm/IBMPlexSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'sonara';
+    src: url('/fonts/saonara/MADESAONARA2 400.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'bebas';
+    src: url('/fonts/bebeas/BebasNeue-Regular.ttf') format('truetype'),
+        url('/fonts/bebeas/BebasNeue-Regular.woff') format('woff');
+}
+
+.fontfunky {
+    font-family: 'FunkySignature';
+}
+
+.fontibm {
+    font-family: 'ibm';
+}
+
+.fontsonara {
+    font-family: 'sonara';
+}
+
+.fontbebeas {
+    font-family: 'bebeas';
+}
