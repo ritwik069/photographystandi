@@ -4,15 +4,11 @@ import React, { useEffect, useState } from 'react'
 import Aboutus from './Aboutus';
 import Header from './Header';
 import MiddleComp from './MiddleComp';
-function HomepageCompoenent() {
-    const [Imagesrc, setImage] = useState()
-    useEffect(() => {
-        getDownloadURL(ref(storage, 'Image/userDisplay')).then(u => { console.log(u); setImage(u) })
-    }, [])
+function HomepageCompoenent({ text, url, image }) {
     return (
-        <div className='w-screen flex flex-col justify-center'>
+        <div className='w-full max-w-[500px] flex flex-col justify-center'>
             <Header />
-            <MiddleComp Imagesrc={Imagesrc} />
+            <MiddleComp Imagesrc={image} text={text} url={url} />
             <Aboutus />
         </div>
     )
