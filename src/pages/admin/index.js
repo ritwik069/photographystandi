@@ -15,15 +15,17 @@ function index() {
     }
     function uploadButton() {
         console.log(image);
-        if (image == null) return
-        const imageref = ref(storage, 'Image/userDisplay')
-            setDoc(doc(db, "data", "userdata"), {
-                text: textfield,
-                url: url,
-            });
-        uploadBytes(imageref, image).then(() => {
-            alert("Image Uploaded")
-        })
+        if (image != null) {
+            const imageref = ref(storage, 'Image/userDisplay')
+            uploadBytes(imageref, image).then(() => {
+                alert("Image Uploaded")
+            })
+        }
+        setDoc(doc(db, "data", "userdata"), {
+            text: textfield,
+            url: url,
+        });
+
     }
     return (
         <div className='w-full flex items-center justify-between'>
